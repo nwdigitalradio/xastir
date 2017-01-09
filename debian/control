@@ -1,0 +1,39 @@
+Source: xastir
+Section: hamradio
+Priority: optional
+Maintainer: Jeremy McDermond <nh6z@nh6z.net>
+Build-Depends: debhelper (>=9),
+               libax25-dev [linux-any],
+               gpsman,
+               libmotif-dev,
+               libxext-dev,
+               libxt-dev,
+               festival,
+               festival-dev,
+               libgraphicsmagick1-dev | libgraphicsmagick-dev,
+               libshp-dev,
+               libproj-dev,
+               libpcre3-dev,
+               libcurl4-gnutls-dev | libcurl-ssl-dev,
+               libgdal-dev (>= 1.10.0-0~),
+               libdb-dev,
+               libgeotiff-dev,
+               dh-autoreconf,
+               automake,
+               po-debconf,
+               autotools-dev
+Standards-Version: 3.9.8
+Homepage: http://www.xastir.org/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/xastir.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/xastir.git
+
+Package: xastir
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Recommends: python, festival
+Suggests: direwolf | soundmodem
+Description: X Amateur Station Tracking and Information Reporting
+ Xastir is an APRS client for X. APRS is the Automatic Position Reporting
+ System, a system where objects report their position (usually obtained from
+ GPS) on the air; Xastir displays this information graphically.
